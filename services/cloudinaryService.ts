@@ -1,6 +1,6 @@
-
-const CLOUD_NAME = 'dducngo62';
-const UPLOAD_PRESET = 'puntadas_unsigned';
+// services/cloudinaryService.ts
+const CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME || 'dducngo62';
+const UPLOAD_PRESET = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET || 'puntadas_unsigned';
 
 export const uploadImageToCloudinary = async (file: File): Promise<string> => {
   const formData = new FormData();
